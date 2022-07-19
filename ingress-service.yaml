@@ -1,0 +1,14 @@
+# add ambassador CRDS to your cluster ==> sudo kubectl apply -f https://github.com/datawire/ambassador-operator/releases/latest/download/ambassador-operator-crds.yaml
+# add ambassador operator for kind by using ==> sudo kubectl apply -n ambassador -f https://github.com/datawire/ambassador-operator/releases/latest/download/ambassador-operator-kind.yaml
+# wait untill ambassador got deployed by using ==> sudo kubectl wait --timeout=180s -n ambassador --for=condition=deployed ambassadorinstallations/ambassador
+# after Ambassador operator got installed successfully apply this below spec
+#kubectl apply -f ingress-service.yaml
+apiVersion: getambassador.io/v1
+kind: Mapping
+metadata:
+  name: spring-backend
+spec:
+  hostname: "spring.com"
+  prefix: /hello
+  rewrite: /
+  service: spring-service:8080
