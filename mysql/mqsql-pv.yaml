@@ -1,4 +1,5 @@
-# https://dev.to/musolemasu/deploy-a-mysql-database-server-in-kubernetes-static-dpc
+# https://dev.to/musolemasu/deploy-a-mysql-database-server-in-kubernetes-static-
+# https://phoenixnap.com/kb/kubernetes-mysql
 
 apiVersion: v1
 kind: PersistentVolume
