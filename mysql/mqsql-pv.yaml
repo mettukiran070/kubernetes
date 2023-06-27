@@ -1,3 +1,5 @@
+# https://dev.to/musolemasu/deploy-a-mysql-database-server-in-kubernetes-static-dpc
+
 apiVersion: v1
 kind: PersistentVolume
 metadata:
