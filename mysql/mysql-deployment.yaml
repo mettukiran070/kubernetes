@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mysql
+  name: mysql-deployment
 spec:
   selector:
     matchLabels:
-      app: mysql
+      app: mysql-deployment
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: mysql
+        app: mysql-deployment
     spec:
       containers:
         - image: mysql:8.0.33
-          name: mysql
+          name: mysql-deployment
           env:
             - name: MYSQL_ROOT_PASSWORD
               value: "mysqlrootpass"
@@ -25,7 +25,7 @@ spec:
               value: "mysqlpass"
           ports:
             - containerPort: 3306
-              name: mysql
+              name: mysql-deployment
           volumeMounts:
             - name: mysql-persistent-storage
               mountPath: /var/lib/mysql
