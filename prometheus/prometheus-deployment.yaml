@@ -27,7 +27,7 @@ spec:
         args:
           - '--storage.tsdb.retention=6h'
           - '--storage.tsdb.path=/prometheus'
-          - '--config.file=/etc/prometheus/prometheus-config.yaml'
+          - '--config.file=/etc/prometheus/prometheus.yaml'
         ports:
         - name: web
           containerPort: 9090
