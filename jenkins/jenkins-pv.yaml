@@ -1,12 +1,12 @@
 # https://www.jenkins.io/doc/book/installing/kubernetes/
 
-kind: StorageClass
-apiVersion: storage.k8s.io/v1
-metadata:
-  name: local-storage
-provisioner: kubernetes.io/no-provisioner
-volumeBindingMode: WaitForFirstConsumer
----
+# kind: StorageClass
+# apiVersion: storage.k8s.io/v1
+# metadata:
+#   name: local-storage
+# provisioner: kubernetes.io/no-provisioner
+# volumeBindingMode: WaitForFirstConsumer
+# ---
 apiVersion: v1
 kind: PersistentVolume
 metadata:
@@ -14,7 +14,7 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: local-storage
+  storageClassName: manual
   claimRef:
     name: jenkins-pvc
     namespace: devops-tools
