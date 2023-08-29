@@ -11,5 +11,5 @@
 2. To connect with the database use below command 
 
 ```
-    kubectl run -it --rm --image=mysql:8.0 --restart=Never mysql-client -- mysql -h mysql-service --password="mysqlrootpass"
+    kubectl run -it --rm --image=mysql:8.0.33 --restart=Never mysql-client -- mysql -h mysql-service --password="mysqlrootpass"
 ```
