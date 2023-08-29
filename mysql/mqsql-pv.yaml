@@ -1,4 +1,4 @@
-# https://dev.to/musolemasu/deploy-a-mysql-database-server-in-kubernetes-static-
+# https://dev.to/musolemasu/deploy-a-mysql-database-server-in-kubernetes-static-dpc
 # https://phoenixnap.com/kb/kubernetes-mysql
 
 apiVersion: v1
@@ -10,7 +10,7 @@ metadata:
 spec:
   storageClassName: manual
   capacity:
-    storage: 2Gi
+    storage: 3Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
